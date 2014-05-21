@@ -51,15 +51,29 @@
 	<body>
 
 
-		<header>
-			<h1>Page title</h1>
-			<nav>
-			
-			</nav>
-		</header>
+		<header><div class="inner">
+			<h1 class="col eight first"><a href="#">Central Saint Martins BA Graphic design degree show 18 – 22 June 2014</a></h1>
+			<nav class="col four"><ul>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Students</a></li>
+				<li><a href="#">Info</a></li>
+			</ul></nav>
+		</div></header>
 
-		<main>
-		
+		<main class="main-thumbs">
+
+		<?php for($i=0;$i<14;$i++): ?>
+			<a href="#" class="thumb<?php if( ($i==0) or ($i%3==0) ) echo " first" ?>">
+				<div class="thumb-image">
+					<img src="./static/img/template/test_01.jpg" alt="placeholder">
+				</div>
+				<div class="thumb-title">
+					<h3>Student name</h3>
+					<h4>Pathway</h4>
+				</div>
+			</a>
+		<?php endfor; ?>
+
 		</main>	
 	
 	
