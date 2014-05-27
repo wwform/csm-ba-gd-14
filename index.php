@@ -34,7 +34,10 @@
 		<link rel="stylesheet" href="./static/css/normalize.css" type="text/css" media="all">
 		<link rel="stylesheet" href="./static/css/template.less?<?php echo time(); ?>" type="text/less" media="all">
 		<script type="text/javascript" src="./static/js/less-1.3.3.min.js"></script>		
+
+		<script type="text/javascript" src="./static/js/modernizr-latest.js"></script>		
 		
+
 		<!--[if lt IE 9]>
 		<script type="text/javascript" src="./static/js/jquery-1.11.0.min.js"></script>
 		<![endif]-->
@@ -68,8 +71,10 @@
 					<img src="./static/img/template/test_01.jpg" alt="placeholder">
 				</div>
 				<div class="thumb-title">
-					<h3>Student name</h3>
-					<h4>Pathway</h4>
+					<div class="thumb-title-inner">
+						<h3>Student name</h3>
+						<h4>Pathway</h4>
+					</div>
 				</div>
 			</a>
 		<?php endfor; ?>

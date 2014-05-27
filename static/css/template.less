@@ -10,9 +10,9 @@ div.clear { clear: both; line-height: 0; height: 0; font-size: 0; border: 0; pad
 @col-width: (@content-width - ((@columns - 1) * @gutter ))/ @columns; 
 
 /* TYPOGRAPHY */
-@font-family: Arial, sans-serif; 
-@font-size: 15px;
-@line-height: 20px;
+@font-family: 'Avenir-Heavy', Arial, sans-serif; 
+@font-size: 18px;
+@line-height: 24px;
 @p-space: @line-height/2;
 
 /* COLOURS */
@@ -184,13 +184,18 @@ main {
 	margin-bottom: @thumb-gutter;
 	margin-left: @thumb-gutter;
 	float: left;
-	background: #eee;
+	position: relative;
+
+	background: #fee;
 }
 
 .first { margin-left: 0; }
 
 .thumb-image {
-	line-height: @thumb-width;	
+	line-height: @thumb-width;
+	position: absolute;
+	left: 0; top: 0;
+	width: @thumb-width; height: @thumb-width;
 }
 
 .thumb-image img {
@@ -198,5 +203,99 @@ main {
 	vertical-align: middle;
 	max-width: 100%;
 	max-height: 100%;
+	z-index: 1;
 }
 
+.thumb-title {
+	width: @thumb-width; height: @thumb-width;
+	position: absolute;
+	line-height: @thumb-width;
+}
+
+.thumb-title-inner {
+	height: auto;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: @line-height;
+}
+
+.thumb-title-inner h3,
+.thumb-title-inner h4 {
+	font-weight: normal;
+	margin: 0;
+}
+
+
+/* interaction */
+.thumb-title { display: none; }
+.thumb:hover .thumb-title { display: block; }
+.thumb:hover .thumb-image { opacity: .1; }
+
+@title-height: 60px;
+.touch .thumb { height: @thumb-width + @title-height; }
+.touch .thumb-title { height: @title-height; position: absolute; bottom: 0; top: auto; line-height: @title-height; }
+
+
+
+
+@media only screen and (min-width: 1200px) {
+
+	@content-width: 1175px;
+	@columns: 12;
+	@gutter: 25px;
+	@col-width: (@content-width - ((@columns - 1) * @gutter ))/ @columns; 
+
+	.col  { 
+		float: left;
+		margin-left: @gutter;
+		width: @col-width; 
+		margin-bottom: @gutter;
+		text-align: left;
+	}
+
+	.two  { width: @col-width * 2 + 1 * @gutter; }
+	.three { width: @col-width * 3 + 2 * @gutter; }
+	.four { width: @col-width * 4 + 3 * @gutter; }
+	.five { width: @col-width * 5 + 4 * @gutter; }
+	.six  { width: @col-width * 6 + 5 * @gutter; }
+	.seven { width: @col-width * 7 + 6 * @gutter; }
+	.eight { width: @col-width * 8 + 7 * @gutter; }
+	.nine { width: @col-width * 9 + 8 * @gutter; }
+	.ten  { width: @col-width * 10 + 9 * @gutter; }
+	.eleven { width: @col-width * 11 + 10 * @gutter; }
+	.twelve { width: @col-width * 12 + 11 * @gutter; }
+
+	header div.inner,
+	main {
+		width: @content-width;
+	}
+
+	@thumb-width: 365px;
+	@thumb-gutter: 40px;
+
+	.thumb {
+		width: @thumb-width; height: @thumb-width;
+		margin-bottom: @thumb-gutter;
+		margin-left: @thumb-gutter;
+	}
+
+	.first {
+		margin-left: 0;
+	}
+
+	.thumb-image {
+		line-height: @thumb-width;
+		width: @thumb-width; height: @thumb-width;
+	}
+
+	.thumb-title {
+		width: @thumb-width; height: @thumb-width;
+		line-height: @thumb-width;
+	}
+
+	@title-height: 60px;
+	.touch .thumb { height: @thumb-width + @title-height; }
+	.touch .thumb-title { height: @title-height; line-height: @title-height; }
+
+
+}
