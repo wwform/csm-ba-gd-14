@@ -11,21 +11,28 @@ div.clear { clear: both; line-height: 0; height: 0; font-size: 0; border: 0; pad
 
 /* TYPOGRAPHY */
 @font-family: 'Avenir-Heavy', Arial, sans-serif; 
-@font-size: 18px;
+@font-size: 17px;
 @line-height: 24px;
 @p-space: @line-height/2;
 
 /* COLOURS */
 @black: #333;
 @background: #fff;
-@grey: #ccc;
+@grey: #999;
 @highlight: #f00;
 
 
-@blue: #20afda;
-@red: #e95935;
-@yellow: #fdc64a;
-@green: #1f9f5f;
+// @blue: #20afda;
+// @red: #e95935;
+// @yellow: #fdc64a;
+// @green: #1f9f5f;
+
+
+@orange: #EA5D0A;
+@green: #0fe391; // #10EF99; 
+@red: #D62C57;
+@yellow: #ede800; // #FAF503;
+
 
 /* OTHER */
 @border: 1px solid @grey;
@@ -165,9 +172,15 @@ header nav ul {
 	float: right;
 }
 header nav li { 
+	display: inline-block;
 	float: left; 
 	line-height: 40px;
-	margin-left: 10px;
+	margin-left: 12px;
+}
+header nav a { color: @grey; }
+header nav a:hover,
+header nav a.active {
+	color: @black;
 }
 
 
@@ -282,8 +295,22 @@ div.inner {
 	padding-top: 20px;
 }
 
-.main-list a.advertising:hover { color: @red; }
-.main-list a.di:hover { color: @blue; }
+/* COLOUR CODING */
+
+.advertising { color: @red; }
+.design-interaction { color: @orange; }
+.illustration { color: @green; }
+.moving-image { color: @yellow; }
+
+a.advertising { color: @black; }
+a.design-interaction { color: @black; }
+a.illustration { color: @black; }
+a.moving-image { color: @black; }
+
+a.advertising:hover { color: @red; }
+a.design-interaction:hover { color: @orange; }
+a.illustration:hover { color: @green; }
+a.moving-image:hover { color: @yellow; }
 
 
 
