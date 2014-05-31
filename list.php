@@ -17,7 +17,7 @@
 				<a href="./student.php">Chin Pei-Yun</a>
 			</div>
 			<div class="col four">
-				<a href="./student.php">Cullen Domingo Carlos Jorge Federico</a><br>
+				<span>Cullen Domingo Carlos Jorge Federico<span><br>
 				<a href="./student.php">Fontaimpe Quentin</a><br>
 				<a href="./student.php">Forrest Oliver Calum</a><br>
 				<a href="./student.php">Gasparini Gabriella</a><br>
