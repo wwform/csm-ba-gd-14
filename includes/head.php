@@ -55,8 +55,12 @@
 
 
 		<header><div class="inner">
-			<h1 class="col eight first"><a href="./">Central Saint Martins BA Graphic design degree show 18 – 22 June 2014</a></h1>
-			<nav class="col four"><ul>
+			<h1 class="col nine first"><a href="./">
+				<span>Central Saint Martins</span> 
+				<span>BA Graphic Design</span> 
+				<span>Degree Show 2014</span>
+			</a></h1>
+			<nav class="col three"><ul>
 				<li><a href="./gallery.php">Gallery</a></li>
 				<li><a href="./list.php">Students</a></li>
 				<li><a href="./info.php">Info</a></li>

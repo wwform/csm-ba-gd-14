@@ -31,7 +31,7 @@ div.clear { clear: both; line-height: 0; height: 0; font-size: 0; border: 0; pad
 @orange: #EA5D0A;
 @green: #0fe391; // #10EF99; 
 @red: #D62C57;
-@yellow: #ede800; // #FAF503;
+@yellow: #f6dd51; // #ede800; // #FAF503;
 
 
 /* OTHER */
@@ -166,6 +166,11 @@ header h1 {
 	line-height: 40px;
 }
 
+header h1 span {
+	float: left;
+}
+header h1 span+span { margin-left: 12px; }
+
 header nav ul { 
 	list-style: none; 
 	margin: 0; padding: 0; border: 0;
@@ -277,12 +282,47 @@ div.inner {
 .touch .thumb { height: @thumb-width + @title-height; }
 .touch .thumb-title { height: @title-height; position: absolute; bottom: 0; top: auto; line-height: @title-height; }
 
+/* GALLERY */
+
+.subnav {
+	position: fixed;
+	top: 40px; left: 0;
+	width: 100%; text-align: center;
+	background: #fff;
+	height: 30px; line-height: 20px;
+	
+	z-index: 99999999;
+}
+
+nav.subnav a {
+	display: inline-block;
+	float: left; margin-right: 12px;
+	color: @grey;
+}
+
+.subnav a.active { color: @black; }
+
+.subnav+.main-thumbs { margin-top: 20px; }
+
+
+
+
+
+
 /* LIST PAGE */
+
+.main-list {
+	padding-top: 40px;
+}
+
+.pw-container { padding: 30px 0 40px 0; }
+.pw-container a:hover { color: #fff; }
+
 
 .main-list h2 {
 	display: block;
 	font-size: @font-size*1.5;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 	clear: both;
 }
 
@@ -302,15 +342,31 @@ div.inner {
 .illustration { color: @green; }
 .moving-image { color: @yellow; }
 
+.student-links.advertising a { color: @red; }
+.student-links.design-interaction a { color: @orange; }
+.student-links.illustration a { color: @green; }
+.student-links.moving-image a { color: @yellow; }
+
+.student-links a:hover { border-bottom: 1px solid; }
+
+.bg-advertising { background: @red; color: #fff; }
+.bg-design-interaction { background: @orange; color: #fff; }
+.bg-illustration { background: @green; color: #fff; }
+.bg-moving-image { background: @yellow; color: #fff; }
+
 a.advertising { color: @black; }
 a.design-interaction { color: @black; }
 a.illustration { color: @black; }
 a.moving-image { color: @black; }
 
-a.advertising:hover { color: @red; }
-a.design-interaction:hover { color: @orange; }
-a.illustration:hover { color: @green; }
-a.moving-image:hover { color: @yellow; }
+a.advertising:hover,
+a.advertising.active { color: @red; }
+a.design-interaction:hover,
+a.design-interaction.active { color: @orange; }
+a.illustration:hover,
+a.illustration.active { color: @green; }
+a.moving-image:hover,
+a.moving-image.active { color: @yellow; }
 
 
 
@@ -321,6 +377,17 @@ a.moving-image:hover { color: @yellow; }
 	overflow: hidden;
 	padding-bottom: 100px;
 }
+
+.student-dot-image {
+	padding-right: 20px;
+}
+
+.student-dot-image img {
+	width: 100%;
+	height: auto;	
+}
+
+
 
 .student-intro {
 	margin-bottom: 40px;
